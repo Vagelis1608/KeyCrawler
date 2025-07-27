@@ -80,6 +80,9 @@ def fetch_file_content(url: str) -> bytes:
         raise RuntimeError(f"Failed to download {url}")
 
 
+# Create directory for storing keys
+os.makedirs(save, exist_ok=True)
+
 # Fetch all pages
 page = 1
 while fetch_and_process_results(page):
