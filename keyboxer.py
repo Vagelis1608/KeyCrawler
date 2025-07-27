@@ -29,7 +29,7 @@ headers = {
 
 save = Path(__file__).resolve().parent / "keys"
 cache_file = Path(__file__).resolve().parent / "cache.txt"
-cached_urls = set(open(cache_file, "r").readlines())
+cached_urls = set(open(cache_file, "r").readlines()) if cache_file.exists() else set()
 
 
 # Function to fetch and print search results
