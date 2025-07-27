@@ -37,11 +37,6 @@ Hacked together really quick - making it public as now I use a stock ROM.
    GITHUB_TOKEN=your_personal_access_token
    ```
 
-4. Create a directory named `keys` in the project root to store the downloaded XML files. Also, create a cache file to store the cache for the URLs already checked:
-   ```sh
-   mkdir keys; touch cache.txt
-   ```
-
 ## Usage
 
 1. Run the main script to scrape `keybox.xml` files from GitHub, validate them, and save them:
