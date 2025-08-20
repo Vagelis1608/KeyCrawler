@@ -19,7 +19,7 @@ if not GITHUB_TOKEN:
 
 # Search query
 search_query = "<AndroidAttestation>"
-search_url = f"https://api.github.com/search/code?q={search_query}"
+search_url = f"https://api.github.com/search/code?q={search_query}+NOT+repo%3Apperez39%2Fgoogle-keys"
 
 # Headers for the API request
 headers = {
