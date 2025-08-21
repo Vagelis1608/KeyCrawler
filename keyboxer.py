@@ -5,6 +5,7 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 from lxml import etree
+import time
 
 # from check import keybox_check
 
@@ -42,6 +43,7 @@ def fetch_and_process_results(page: int) -> bool:
     if "items" in search_results:
         for item in search_results["items"]:
             file_name = item["name"]
+            time.sleep(1) # Wait 1 second to (hopefully) not get rate limited.
             # Process only XML files
             if file_name.lower().endswith(".xml"):
                 raw_url: str = (
