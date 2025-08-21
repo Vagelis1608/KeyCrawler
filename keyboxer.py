@@ -18,8 +18,8 @@ if not GITHUB_TOKEN:
     raise ValueError("GITHUB_TOKEN is not set in the .env file")
 
 # Search query
-search_query = "<AndroidAttestation>"
-search_url = f"https://api.github.com/search/code?q={search_query}+NOT+repo:pperez39/google-keys"
+search_query = "AndroidAttestation+extension:xml+-repo:pperez39/google-keys"
+search_url = f"https://api.github.com/search/code?q={search_query}"
 
 # Headers for the API request
 headers = {
